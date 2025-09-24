@@ -1,10 +1,10 @@
-
 export interface Reader {
     id: number;
     name: string;
     intro: string;
     teachers: string;
     narrators: string[];
+    color: string;
 }
 
 export interface Narrator {
@@ -15,4 +15,6 @@ export interface Narrator {
     path: string;
     origins: string;
     uniqueness: string;
+    color: string;
+    readerColor: string;
 }

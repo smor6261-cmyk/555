@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -10,13 +9,10 @@ type Section = 'readers' | 'narrators';
 const App: React.FC = () => {
     const [activeSection, setActiveSection] = useState<Section>('readers');
 
-    const primaryColor = "#2c5f2d";
-    const secondaryColor = "#97bc62";
-
     const getButtonClass = (section: Section) => {
         return activeSection === section
-            ? `bg-[${secondaryColor}] scale-105`
-            : `bg-[${primaryColor}] hover:bg-[${secondaryColor}]`;
+            ? `bg-slate-700 scale-105`
+            : `bg-slate-500 hover:bg-slate-600`;
     };
 
     return (
