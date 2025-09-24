@@ -64,10 +64,17 @@ const ReadersSection: React.FC<ReadersSectionProps> = ({ isActive }) => {
         }
         return (
             <div 
-                className="bg-gray-50 p-6 rounded-lg mt-5 min-h-[150px] border-t-8"
+                className="relative bg-gray-50 p-6 rounded-lg mt-5 min-h-[150px] border-t-8 overflow-hidden"
                 style={{ borderColor: selectedReader.color }}
             >
-                {content}
+                <div aria-hidden="true" className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none select-none">
+                    <span className="text-5xl md:text-7xl font-black text-gray-200 -rotate-12 opacity-60">
+                        القراء العشرة ورواتهم
+                    </span>
+                </div>
+                <div className="relative z-10">
+                    {content}
+                </div>
             </div>
         );
     };
